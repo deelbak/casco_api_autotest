@@ -1,0 +1,22 @@
+{
+    "tariff_id": 181,
+    "insurance_sum": 12500000,
+    "id_esbd": 8187937,
+    "vin": "SALGA2EF2EA185165",
+    "vehicle_type_id": 4,
+    "mark": "LAND",
+    "model": "ROVER RANGE ROVER",
+    "born_year": 2014,
+    "region_id": 15,
+    "registration_number": "002ZZZ02",
+    "registration_certificate_number": "ZX00090170",
+    "registration_certificate_date": "15.08.2621",
+    "body_number": "SALGA2EF2EA185165",
+    "model_id_esbd": 126879,
+    "mark_id_esbd": 39776,
+    "color": "БЕЛЫЙ",
+    "engine_power": 115,
+    "engine_volume": 1569,
+    "engine_number": "TESTLU777861",
+    "no_revision_reason_id": 3
+}
