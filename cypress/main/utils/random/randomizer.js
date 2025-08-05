@@ -20,5 +20,25 @@ class Randomizer {
         const finishDate = finishDateObject.format(JSONLoader.testData.datesFormat);
 
         const daysDifferenceIncluded = finishDateObject.diff(startDateObject, 'days') + 1;
+
+        const currentMonth = getAbsoluteMonth(moment.unix(unixOne).format(JSONLoader.testData.datesFormat));
+        const startMonth = getAbsoluteMonth(startDate);
+        const finishMonth = getAbsoluteMonth(finishDate);
+
+        let startMonthDifference = startMonth - currentMonth;
+        let finishMonthDifference = finishMonth - currentMonth;
+
+        if(nextDayObject.date() === 1) {
+            startMonthDifference++;
+            finishMonthDifference++;
+        }
+
+        return {
+            startDate,
+            finishDate,
+            startMonthDifference,
+            finishMonthDifference,
+            daysDifferenceIncluded
+        };
     }
 }
