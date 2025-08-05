@@ -31,3 +31,5 @@ class DataUtils {
 
     }
 }
+
+module.exports = DataUtils;
