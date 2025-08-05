@@ -16,6 +16,7 @@ exports.mochaHooks = {
             const title = this.test.parent.suites[0].tests[0].file.split('/').pop().split('.').reverse().pop();
             Logger.log(`${title}'s test log:`, title);
         }
+
         await onesDB.createConnection();
         await kaspiDB.createConnection();
         await authAPI.setToken();
@@ -25,5 +26,19 @@ exports.mochaHooks = {
         await dictionaryAPI.setToken();
         await dictionaryAPI.toggleServer();
         await dictionaryAPI.toggleVerification();
+    },
+
+    async afterAll() {
+        await onesDB.closeConnection();
+        await kaspiDB.closeConnection();
+
+        this.test.parent.suites[0].tests.some((test) => test.state === 'failed') 
+        ? Logger.log(JSONLoader.confingData.failed)
+        : Logger.log(JSONLoader.configData.passed);
+
+        if (JSONLoader.configData.parallel) {
+            Logger.logParallel();
+            Logger.logToFileParallel();
+        }
     }
 }
