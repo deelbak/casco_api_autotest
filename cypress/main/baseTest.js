@@ -40,5 +40,5 @@ exports.mochaHooks = {
             Logger.logParallel();
             Logger.logToFileParallel();
         }
-    }
-}
+    },
+};
