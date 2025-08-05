@@ -29,7 +29,7 @@ class Logger {
       const words = step.split(' ');
       const firstPart = words.slice(0, 3).join(' ');
       const secondPart = words.slice(words.length - 2).join(' ');
-      console.log(`  ${firstPart} ${secondPart}`); // eslint-disable-line no-console
+      console.log(`  ${firstPart} ${secondPart}`);
     } else {
       console.log(`  ${step}`); // eslint-disable-line no-console
     }

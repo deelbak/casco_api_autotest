@@ -82,3 +82,5 @@ class BaseAPI {
         }
     }
 }
+
+module.exports = BaseAPI;
