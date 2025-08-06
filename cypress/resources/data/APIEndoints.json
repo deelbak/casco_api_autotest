@@ -1,0 +1,58 @@
+{
+    "auth": {
+        "login": "/api/login",
+        "testUsers": "api/auth/test-users"
+    },
+
+    "dictionary": {
+        "servers": "api/dictionary/settings/5",
+        "verifyBool": "api/dictionary/settings/verify_bool",
+        "getChannelDetails": "api/dictionary/channel-details",
+        "testClients": "api/dictionary/test-clients",
+        "testCars": "api/dictionary/test-cars"
+    },
+    
+    "kaspi": {
+        "pay": "/api/kaspi/kaspi/pay"
+    },
+    
+    "ones": {
+        "callMethod": "api/ones/v2/ones/call-method"
+    },
+    
+    "TWB": {
+        "getListByName": "GetListByName?type_name=Документ&object_name=Котировки&НомерЗапроса=",
+        "getQuotationByNumber": "GetQuotationByNumber?id_quote=",
+        "startSetPolicyWaiting": "StartSetPolicyWaiting",
+        "getPolicy": "GetPolicy",
+        "setPolicy": "SetPolicy",
+        "setCancellation": "SetCancellation"
+    },
+
+    "ESBD": {
+        "callMethod": "api/esbd/call-method"
+    },
+
+    "casco": {
+        "createDraftOfPolicy": "api/casco/policies",
+        "getPolicy": "api/casco/policies/{policyId}",
+        "setPolicy": "api/casco/policies/{policyId}",
+        "setCancellation": "api/casco/policies/{policyId}",
+        "setTFinPolicy": "api/casco/policies/{policyId}/vehicles",
+        "deleteVehicleFromPolicy": "api/casco/policies/{policyId}/vehicles/{vehicleId}",
+        "getVehiclesFromPolicy": "api/casco/policies/{policyId}/vehicles",
+        "updateTFinPolicy": "api/casco/policies/{policyId}/vehicles/{vehicleId}",
+        "getAveragePrice": "api/casco/vehicles/average-price",
+        "getVehicle": "api/casco/vehicles",
+        "getTariffs": "api/casco/tariffs",
+        "setEvaluation": "api/casco/emergency-commissioner/create/evaluation",
+        "setRevision": "api/casco/emergency-commissioner/create/revision",
+        "checkBID": "api/casco/emergency-commissioner/check/{bidId}",
+        "setClient": "api/casco/policies/{policyId}/clients/create",
+        "deleteClient": "api/casco/policies/{policyId}/clients/{clientId}",
+        "getScheduleOfPayments": "api/casco/policies/{policyId}/schedule",
+        "setPayment": "api/casco/policies/{policyId}/payment",
+        "deletePayment": "api/casco/policies/{policyId}/payment/{paymentId}"
+    }
+
+}
