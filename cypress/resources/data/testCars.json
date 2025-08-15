@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "tf_id": 8187937,
+    "type_id": 4,
+    "vin": "SALGA2EF2EA185165",
+    "reg_num": "002ZZZ02",
+    "reg_cert_num": "ZX00090170",
+    "dt_reg_cert": "2015-08-26",
+    "year": 2014,
+    "region_id": 15,
+    "big_city_bool": 1,
+    "model": "ROVER RANGE ROVER",
+    "mark": "LAND",
+    "color": "БЕЛЫЙ",
+    "engine_volume": 4999,
+    "engine_number": "",
+    "country_id": 1,
+    "created_at": null,
+    "updated_at": null
+  },
+  {
+    "id": 2,
+    "tf_id": 12712946,
+    "type_id": 4,
+    "vin": "MXHLN41GBMK117143",
+    "reg_num": "088MEB02",
+    "reg_cert_num": "AJ00431903",
+    "dt_reg_cert": "2021-03-15",
+    "year": 2021,
+    "region_id": 15,
+    "big_city_bool": 1,
+    "model": "ELANTRA",
+    "mark": "HYUNDAI",
+    "color": "БЕЛЫЙ",
+    "engine_volume": 1999,
+    "engine_number": "G4NLLU777861",
+    "country_id": 1,
+    "created_at": null,
+    "updated_at": null
+  }
+]
