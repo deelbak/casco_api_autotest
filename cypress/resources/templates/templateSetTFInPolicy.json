@@ -1,0 +1,22 @@
+{
+  "tariff_id": 0,
+  "insurance_sum": 0,
+  "id_esbd": 0,
+  "vin": "",
+  "vehicle_type_id": 0,
+  "mark": "",
+  "model": "",
+  "born_year": 0,
+  "region_id": 0,
+  "registration_number": "",
+  "registration_certificate_number": "",
+  "registration_certificate_date": "",
+  "body_number": "",
+  "model_id_esbd": 0,
+  "mark_id_esbd": 0,
+  "color": "",
+  "engine_power": 0,
+  "engine_volume": 0,
+  "engine_number": "",
+  "category": ""
+}

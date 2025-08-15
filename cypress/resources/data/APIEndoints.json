@@ -21,8 +21,6 @@
     },
     
     "TWB": {
-        "getListByName": "GetListByName?type_name=Документ&object_name=Котировки&НомерЗапроса=",
-        "getQuotationByNumber": "GetQuotationByNumber?id_quote=",
         "startSetPolicyWaiting": "StartSetPolicyWaiting",
         "getPolicy": "GetPolicy",
         "setPolicy": "SetPolicy",
@@ -38,19 +36,19 @@
         "getPolicy": "api/casco/policies/{policyId}",
         "setPolicy": "api/casco/policies/{policyId}",
         "setCancellation": "api/casco/policies/{policyId}",
-        "setTFinPolicy": "api/casco/policies/{policyId}/vehicles",
+        "setVehicleInPolicy": "api/casco/policies/{policyId}/vehicles",
         "deleteVehicleFromPolicy": "api/casco/policies/{policyId}/vehicles/{vehicleId}",
         "getVehiclesFromPolicy": "api/casco/policies/{policyId}/vehicles",
         "updateTFinPolicy": "api/casco/policies/{policyId}/vehicles/{vehicleId}",
-        "getAveragePrice": "api/casco/vehicles/average-price",
-        "getVehicle": "api/casco/vehicles",
-        "getTariffs": "api/casco/tariffs",
+        "getAveragePrice": "api/casco/vehicles/average-price?",
+        "getVehicle": "api/casco/vehicles?",
+        "getTariffs": "api/casco/tariffs?",
         "setEvaluation": "api/casco/emergency-commissioner/create/evaluation",
         "setRevision": "api/casco/emergency-commissioner/create/revision",
         "checkBID": "api/casco/emergency-commissioner/check/{bidId}",
         "setClient": "api/casco/policies/{policyId}/clients/create",
         "deleteClient": "api/casco/policies/{policyId}/clients/{clientId}",
-        "getScheduleOfPayments": "api/casco/policies/{policyId}/schedule",
+        "getScheduleOfPayments": "api/casco/policies/{policyId}/schedule?",
         "setPayment": "api/casco/policies/{policyId}/payment",
         "deletePayment": "api/casco/policies/{policyId}/payment/{paymentId}"
     }
