@@ -38,7 +38,7 @@ class CascoAPI extends BaseAPI {
   }
 
   async createDraftOfPolicy() {
-    return await this.#API.post(JSONLoader.APIEndpoints.casco.createDraftOfPolicy);
+    return this.#API.post(JSONLoader.APIEndpoints.casco.createDraftOfPolicy);
   }
 
   async getVehicle () {
@@ -46,7 +46,7 @@ class CascoAPI extends BaseAPI {
         vin: JSONLoader.testCars.vin,
     };
 
-    return await this.#API(APIEndpoints.getVehicle, params);
+    return this.#API(APIEndpoints.getVehicle, params);
   }
 
   async getAveragePriceFromKolesaKZ() {
@@ -56,7 +56,7 @@ class CascoAPI extends BaseAPI {
         year: JSONLoader.testCars.year,
     };
 
-    return await this.#API.get(
+    return this.#API.get(
         JSONLoader.APIEndpoints.getAveragePrice, params
     );
   }
@@ -81,20 +81,47 @@ class CascoAPI extends BaseAPI {
 
     return firstTariff.id;
   }
+  async getTariffToSpecifiedVehicleWithoutRevision() {
 
-    async setVehicleInPolicy() {
-    const requestBody = Randomizer.createRandomRequestStructures(
-        JSONLoader.testCars,
-        JSONLoader.templateSetTFInPolicy,
+    const params = {
+        vehicle_type_id: JSONLoader.testCars[0].type_id,
+        vehicle_age: calculatedVehicleAge,
+        insurance_sum: this.getAveragePriceFromKolesaKZ(),
+        page: Randomizer.getRandomInteger(2, 1),
+        per_page: Randomizer.getRandomInteger(20, 10),
+    };
+
+    const response = await this.#API.get(
+        JSONLoader.APIEndpoints.getTariffs, params
     );
+    const firstTariff = response.data?.data?.[0];
 
-    const response = await this.#API.post(
-        JSONLoader.APIEndpoints.casco.setVehicleInPolicy,
-        requestBody,
-    );
 
-    return { response, requestBody };
+    return firstTariff.id;
   }
+
+    async setVehicleInPolicy(policy_id) {
+        const params = JSONLoader.templateSetVehicleInPolicy;
+        const endpoint = JSONLoader.APIEndpoints.setVehicleInPolicy.toString().replace('{policy_id}', policy_id);
+
+        return this.#API.post(endpoint, params);
+    }
+
+    async setHolderInPolicy(policy_id) {
+        const params = JSONLoader.templateSetHolderInPolicy;
+        const endpoint = JSONLoader.APIEndpoints.setClient.toString().replace('{policy_id}', policy_id);
+
+        return this.#API.post( endpoint, params );
+    }
+
+    async setBeneficiarInPolicy(policy_id) {
+        const params = JSONLoader.templateSetBeneficiarInPolicy;
+        const endpoint = JSONLoader.APIEndpoints.setClient.toString().replace('{policy_id}', policy_id);
+
+        return this.#API.post( endpoint, params );
+    }
+
+
 
 }
   
